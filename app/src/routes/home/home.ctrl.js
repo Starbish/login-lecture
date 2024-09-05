@@ -11,6 +11,10 @@ const output = {
     login: (req, res) => {
         res.render("home/login");
     },
+
+    register: (req, res) => {
+        res.render("home/register");
+    }
 };
 
 const process = {
@@ -18,6 +22,7 @@ const process = {
 
         const user = new User(req.body);
         const response = user.login();
+        console.log(response);
         return res.json(response);
         // const id = req.body.id,
         //     psword = req.body.psword;
@@ -40,7 +45,6 @@ const process = {
 }
 
 module.exports = {
-
     output, 
     process,
 };

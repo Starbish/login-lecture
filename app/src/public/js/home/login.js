@@ -1,7 +1,7 @@
 "use strict";
 
 const id = document.querySelector("#id"),
-    psword = document.querySelector("#pw"),
+    psword = document.querySelector("#psword"),
     loginBtn = document.querySelector("button");
 
 loginBtn.addEventListener("click", login);
@@ -30,5 +30,6 @@ function login() {
         })
         .catch((err) => {
             console.error(new Error("로그인 중 에러 발생"));
+            console.log("에러..", err);
         });
 }
