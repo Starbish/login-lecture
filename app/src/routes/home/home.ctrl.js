@@ -19,28 +19,15 @@ const output = {
 
 const process = {
     login: (req, res) => {
-
         const user = new User(req.body);
         const response = user.login();
-        console.log(response);
         return res.json(response);
-        // const id = req.body.id,
-        //     psword = req.body.psword;
+    },
 
-        // const users = UserStorage.getUsers("id", "psword");
-        // const response = {};
-        // let idx = users.id.indexOf(id);
-        // if( idx != -1 ) {
-        //     console.log(idx);
-        //     if (users.psword[idx] === psword) {
-        //         response.success = true;
-        //         return res.json(response);
-        //     }
-        // }
-        
-        // response.success = false;
-        // response.msg = "Failed to sign in.";
-        // return res.json(response);
+    register: (req, res) => {
+        const user = new User(req.body);
+        const response = user.register();
+        return res.json(response);
     },
 }
 
